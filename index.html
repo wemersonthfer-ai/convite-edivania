@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#642f48">
+<title>Uma surpresa para Edvania</title>
+<style>
+:root{
+ --wine:#642f48;--wine2:#87445f;--rose:#c47b91;--blush:#f1cbd5;
+ --cream:#fff5ed;--ink:#4b303b;--muted:#80636f;--line:#e7b9c7;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;padding:25px 14px 34px;
+ display:flex;justify-content:center;align-items:center;
+ color:var(--ink);font-family:Georgia,"Times New Roman",serif;
+ background:
+  radial-gradient(ellipse at 12% 10%,#b96f8b 0,transparent 32%),
+  radial-gradient(ellipse at 90% 88%,#3f2638 0,transparent 35%),
+  linear-gradient(145deg,#743650 0%,#9e526e 48%,#4c293e 100%);
+}
+.wrap{width:100%;max-width:520px}
+.card{
+ position:relative;overflow:hidden;
+ background:linear-gradient(150deg,rgba(255,247,240,.98),rgba(250,226,229,.97));
+ border:1px solid rgba(255,255,255,.7);border-radius:28px;
+ box-shadow:0 24px 70px #25121f55;padding:30px 23px 26px;text-align:center;
+}
+.card:before,.card:after{content:"";position:absolute;pointer-events:none;border:1px solid #d7a1b3;border-radius:50%;opacity:.45}
+.card:before{width:180px;height:180px;top:-120px;right:-65px}
+.card:after{width:150px;height:150px;bottom:-110px;left:-55px}
+.topline{font:11px/1.5 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--wine2);margin-bottom:15px}
+.flower{font-size:28px;color:var(--rose);margin:0 0 9px}
+h1{font-size:clamp(32px,8vw,43px);line-height:1.06;font-weight:normal;margin:0 0 13px;color:var(--wine)}
+.intro{font-size:17px;line-height:1.6;color:#765462;margin:0 auto 21px;max-width:390px}
+.ornament{display:flex;align-items:center;gap:10px;justify-content:center;margin:23px auto}
+.ornament span{height:1px;width:54px;background:#d5a0b0}
+.ornament b{font-size:14px;font-weight:normal;color:var(--rose)}
+.message{text-align:left;font-size:16.5px;line-height:1.72;white-space:pre-line;position:relative}
+.signature{text-align:right;color:var(--wine2);font-size:20px;font-style:italic;margin-top:17px}
+.invite{
+ position:relative;background:linear-gradient(135deg,#f6dce2,#fcece8);
+ border:1px solid #e4b8c5;border-radius:21px;padding:22px 16px;margin-top:27px;
+ box-shadow:inset 0 1px 0 #fff9;
+}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--wine2);margin:0 0 10px}
+.invite h2{font-weight:normal;font-size:clamp(24px,6vw,29px);line-height:1.2;margin:0 0 11px;color:var(--wine)}
+.invite p{font:15px/1.55 Arial,sans-serif;color:#765462;margin:6px 0}
+.place{font-weight:bold;color:var(--wine)!important;margin-top:12px!important}
+.date{font-weight:bold;letter-spacing:.025em}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:19px}
+button{border:0;border-radius:999px;padding:14px 10px;font:bold 14px Arial,sans-serif;cursor:pointer;transition:transform .15s,filter .15s}
+button:active{transform:scale(.98)}
+button:hover{filter:brightness(1.03)}
+.yes{background:linear-gradient(135deg,#75344f,#a14e6b);color:#fff;box-shadow:0 7px 18px #74365035}
+.no{background:#fff8f5;color:var(--wine);border:1px solid #d9a4b4}
+.note{font:12px/1.5 Arial,sans-serif;color:#8b6d79;margin:13px 0 0}
+.footer{font:12px Arial,sans-serif;color:#f8dfe6;text-align:center;margin:16px 8px 0;letter-spacing:.05em}
+@media(min-width:480px){.card{padding:38px 34px 31px}}
+@media(max-width:350px){.buttons{grid-template-columns:1fr}.card{padding:27px 18px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <article class="card">
+    <div class="topline">Um carinho em forma de surpresa</div>
+    <div class="flower" aria-hidden="true">✿</div>
+    <h1>Feliz aniversário,<br>Edvania!</h1>
+    <p class="intro">Um pequeno presente e algumas palavras sinceras para celebrar você e esse novo ciclo.</p>
+    <div class="ornament" aria-hidden="true"><span></span><b>✧</b><span></span></div>
+    <div class="message">Espero que você não ache exagerado… Bem, foi algo simples, mas de coração.
+
+Desejo toda a felicidade do mundo neste novo ciclo. Que Deus te abençoe, te ilumine e permita que todos os seus sonhos e objetivos sejam alcançados.
+
+Siga sendo essa pessoa tão amável, feliz e cheia de vida. Obrigado por ser uma menina tão maravilhosa!
+
+Feliz aniversário! Felicidades, saúde e prosperidade, hoje e sempre.</div>
+    <div class="signature">Com carinho,<br>W. Thiago</div>
+
+    <section class="invite" aria-labelledby="invite-title">
+      <p class="eyebrow">Meu convite para você</p>
+      <h2 id="invite-title">Vamos comemorar esse dia especial com um jantar?</h2>
+      <p class="place">Mahai — Praia da Costa</p>
+      <p class="date">17 de janeiro · às 20h</p>
+      <div class="buttons">
+        <button class="yes" id="yes" type="button">Sim, aceito</button>
+        <button class="no" id="no" type="button">Não, obrigada</button>
+      </div>
+      <p class="note">Escolhendo uma opção, o WhatsApp abrirá nossa conversa com a mensagem pronta para você enviar.</p>
+    </section>
+  </article>
+  <p class="footer">Feito com carinho</p>
+</main>
+<script>
+const whatsappNumber = '5527996008908';
+function openWhatsApp(choice) {
+  const message = choice === 'SIM'
+  ? 'Oi, W.Thiago! Aceito o convite para jantar no Mahai, Praia da Costa, no dia 17/01/2027 às 20h. Obrigada pela surpresa!'
+  : 'Oi, W.Thiago! Obrigada pelo convite e pelo carinho. Desta vez, vou ficar devendo o jantar.';
+  const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+  window.location.href = url;
+}
+document.getElementById('yes').addEventListener('click', () => openWhatsApp('SIM'));
+document.getElementById('no').addEventListener('click', () => openWhatsApp('NAO'));
+</script>
+</body>
+</html>
